@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container-fluid bg-set1">
+    <div class="row text-center">
+        <div class="col-md-5 col-lg-5 col-12  box-text1">
+            <a href="{% url 'food' %}" style="color: black;">
+            <h2 class="box-text">Plan <br> alimentaire</h2>
+        </a>
+        </div>
+        <div class="col-md-5 col-lg-5 col-12">
+            <a href="{% url 'training' %}" style="color: black;">
+            <h2 class="box-text"> Plan <br> entrainement</h2>
+        </a>
+        </div>
+    </div>
+    <div class="row text-center box-width">
+        <div class="col-md-12 col-lg-12 col-12 box-text2">
+            <p>Mes statistiques - Mes progrès</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,3 +1,4 @@
+from http.client import HTTPResponse
 from django.shortcuts import render,HttpResponseRedirect,redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate,login,logout
@@ -47,39 +48,116 @@ def home_session(request):
    
 
 
+
+
 def signup_user(request):
     if request.method=='POST':
-        fm=SignUpForm(request.POST)
-        if fm.is_valid():
-            fm.save()
-            messages.success(request,'Account has been created successfully.')
-            return HttpResponseRedirect('login')
+        ins= Register(request.POST)
+        name = request.POST['name']
+        password = request.POST['password']
+
+        Food_Plan_Summary_week_one = request.POST['foodplansummaryweekone']
+        Food_Plan_Summary_week_one_chart = request.POST['foodplansummaryweekonechart']
+        Food_Plan_Summary_week_two = request.POST['foodplansummaryweektwo']
+        Food_Plan_Summary_week_two_chart = request.POST['foodplansummaryweektwochart']
+        Food_Plan_Summary_week_three = request.POST['foodplansummaryweekthree']
+        Food_Plan_Summary_week_three_chart  = request.POST['foodplansummaryweekthreechart']
+        Food_Plan_Summary_week_four = request.POST['foodplansummaryweekfour']
+        Food_Plan_Summary_week_four_chart = request.POST['foodplansummaryweekfourchart']
+
+        Training_Plan_Summary_week_one = request.POST['trainingplansummaryweekone']
+        Training_Plan_Summary_week_one_chart = request.POST['trainingplansummaryweekonechart']
+        Training_Plan_Summary_week_two = request.POST['trainingplansummaryweektwo']
+        Training_Plan_Summary_week_two_chart = request.POST['trainingplansummaryweektwochart']
+        Training_Plan_Summary_week_three = request.POST['trainingplansummaryweekthree']
+        Training_Plan_Summary_week_three_chart = request.POST['trainingplansummaryweekthreechart']
+        Training_Plan_Summary_week_four = request.POST['trainingplansummaryweekfour']
+        Training_Plan_Summary_week_four_chart = request.POST['trainingplansummaryweekfourchart']
+
+        Buy_week_one = request.POST['buyweekone']
+        Buy_week_one_chart = request.POST['buyweekonechart']
+        Buy_week_two = request.POST['buyweektwo']
+        Buy_week_two_chart = request.POST['buyweektwochart']
+        Buy_week_three = request.POST['buyweekthree']
+        Buy_week_three_chart = request.POST['buyweekthreechart']
+        Buy_week_four = request.POST['buyweekfour']
+        Buy_week_four_chart = request.POST['buyweekfourchart']
+
+        Progress_week_one = request.POST['prone']
+        Progress_week_one_chart = request.POST['pronechart']
+        Progress_week_two = request.POST['prtwo']
+        Progress_week_two_chart = request.POST['prtwochart']
+        Progress_week_three = request.POST['prthree']
+        Progress_week_three_chart = request.POST['prthreechart']
+        Progress_week_four = request.POST['prfour']
+        Progress_week_four_chart = request.POST['prfourchart']
+
+        My_measurements_and_progress = request.POST['exone']
+        The_summary_of_the_progression_curve = request.POST['extwo']
+        Meal_close_to_the_training_summary = request.POST['exthree']
+        Pre_post_recipe_data = request.POST['exfour']
+        In_Case_recipe_data = request.POST['exfive']
+        Meal_away_training_recipe_data = request.POST['exsix']
+        Dessert_recipe_data = request.POST['exseven']
+
+        ins = Register(name=name, password=password, Food_Plan_Summary_week_one=Food_Plan_Summary_week_one,
+                        Food_Plan_Summary_week_one_chart=Food_Plan_Summary_week_one_chart, Food_Plan_Summary_week_two=Food_Plan_Summary_week_two, Food_Plan_Summary_week_two_chart=Food_Plan_Summary_week_two_chart, Food_Plan_Summary_week_three=Food_Plan_Summary_week_three,
+                        Food_Plan_Summary_week_three_chart=Food_Plan_Summary_week_three_chart, Food_Plan_Summary_week_four=Food_Plan_Summary_week_four, Food_Plan_Summary_week_four_chart=Food_Plan_Summary_week_four_chart, Training_Plan_Summary_week_one=Training_Plan_Summary_week_one,
+                        Training_Plan_Summary_week_one_chart=Training_Plan_Summary_week_one_chart, Training_Plan_Summary_week_two=Training_Plan_Summary_week_two, Training_Plan_Summary_week_two_chart=Training_Plan_Summary_week_two_chart, Training_Plan_Summary_week_three=Training_Plan_Summary_week_three,
+                        Training_Plan_Summary_week_three_chart=Training_Plan_Summary_week_three_chart, Training_Plan_Summary_week_four=Training_Plan_Summary_week_four, Training_Plan_Summary_week_four_chart=Training_Plan_Summary_week_four_chart , Buy_week_one=Buy_week_one,
+                        Buy_week_one_chart=Buy_week_one_chart, Buy_week_two=Buy_week_two, Buy_week_two_chart=Buy_week_two_chart, Buy_week_three=Buy_week_three,
+                        Buy_week_three_chart=Buy_week_three_chart, Buy_week_four=Buy_week_four, Buy_week_four_chart=Buy_week_four_chart, Progress_week_one=Progress_week_one,
+                        Progress_week_one_chart=Progress_week_one_chart, Progress_week_two=Progress_week_two, Progress_week_two_chart=Progress_week_two_chart, Progress_week_three=Progress_week_three,
+                        Progress_week_three_chart=Progress_week_three_chart, Progress_week_four=Progress_week_four, Progress_week_four_chart=Progress_week_four_chart, My_measurements_and_progress=My_measurements_and_progress,
+                        The_summary_of_the_progression_curve=The_summary_of_the_progression_curve, Meal_close_to_the_training_summary=Meal_close_to_the_training_summary, Pre_post_recipe_data=Pre_post_recipe_data, In_Case_recipe_data=In_Case_recipe_data,
+                        Meal_away_training_recipe_data=Meal_away_training_recipe_data, Dessert_recipe_data=Dessert_recipe_data)
+        ins.save()
+        return redirect('/')
     else:
-        fm=SignUpForm()
-    return render(request,'signup.html',{'form':fm})
+        return render(request, 'signup.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # if request.method=='POST':
+    #     fm=SignUpForm(request.POST)
+    #     if fm.is_valid():
+    #         fm.save()
+    #         messages.success(request,'Account has been created successfully.')
+    #         return HttpResponseRedirect('/')
+    # else:
+    #     fm=SignUpForm()
+    # return render(request,'signup.html',{'form':fm})
 
 
 def login_user(request):
-    if not request.user.is_authenticated:
-        if request.method=='POST':
-            email=request.POST['email']
-            password = request.POST['password']
-            if register.objects.filter(email=email).exists():
-                user = register.objects.get(email=email)
-                print(user,'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu')
-                if register.objects.filter(password=password).exists():
-                    password_get = str(register.objects.get(password=password))
-                    print(password_get)
-                    user_last = authenticate(username=user, password=password_get)
-                    if user is not None:
-                        login(request, user)
-                        return render(request,'profile.html')         
-        else:
-            pass
-        return render(request,'profile.html')
-    else:
-        messages.success(request,'You are already login')
-        return HttpResponseRedirect('/')
+    return render(request, 'login.html')
+    # if not request.user.is_authenticated:
+    #     if request.method=='POST':
+    #         fm=AuthenticationForm(request=request,data=request.POST)
+    #         if fm.is_valid():
+    #             uname=fm.cleaned_data['username']
+    #             upass=fm.cleaned_data['password']
+    #             user=authenticate(username=uname, password=upass)
+    #             if user is not None:
+    #                 login(request, user)
+    #                 return HttpResponseRedirect('/')                
+    #     else:
+    #         fm=AuthenticationForm() 
+    #     return render(request,'index.html', {'form':fm})
+    # else:
+    #     messages.success(request,'You are already login')
+    #     return HttpResponseRedirect('/') 
         
 
 

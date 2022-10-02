@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid body">
+        <div class="row">
+            <div class="col-md-6 col-12 col-sm-12 col-lg-6"></div>
+            <div class="col-md-5 col-12 col-sm-12 col-lg-5">
+                <form action="login" method="post" novalidate class="text-left form-login">
+                    {% csrf_token %}
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example1">E-mail</label>
+                        <input type="text" id="form2Example1" name="username" class="form-control" />
+                    </div>
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example2">Mot de passe</label>
+                        <input type="password" id="form2Example2" name="password" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn btn-dark rounded-pill">Connexion</button>
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Not a member? <a href="{% url 'signup' %}">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

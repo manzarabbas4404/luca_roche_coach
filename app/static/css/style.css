@@ -130,7 +130,7 @@ mark {
 .boxing {
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
     height: 350px;
-    max-width: 23% !important;
+    max-width: 23% ;
     /* margin: 25px 10px 10px 10px; */
     margin: auto;
     margin-top: 3%;
@@ -824,8 +824,30 @@ mark {
 }
 
 @media screen and (max-width:525px) {
+    .seprato{
+        margin: 0 auto;
+    }
+    .femme{
+        padding-top: 10%;
+    }
+    .portfolio-img-small{
+        margin-top: 10%;
+    }
+    .video-small{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .arrow{
+        transform: rotate(130deg);
+    }
+    .small-width{
+        width: 13%;
+        margin-left: 4% !important;
+    }
     .boxing {
-        height: 450px;
+        height: 350px;
+        max-width: 90% !important;
+        margin-top: 10%;
     }
     .arrow{
         width: 35%;
@@ -889,4 +911,10 @@ mark {
         margin-top: 5%;
     }
 
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../images/R.png");   
+}
+.navbar-toggler{
+    padding: 0.2rem !important;
 }

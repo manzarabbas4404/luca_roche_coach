@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="row">
-                    <div>
+                    <div class="col-12">
                         <p class="paratwo">
                             “Où que vous soyez, je vous guide. <br>
                             Résultat garanti ou remboursé”
@@ -29,7 +29,7 @@
                 </div>
                 <div class="row mar-b">
                     <div class="col-md-1"></div>
-                    <div class="col-md-10 text-center">
+                    <div class="col-md-10 text-center email-box">
                         <p>
                             <span class="pret">Prêt(e) à te transformer ?</span><br>
                             <span class="spaisi">Saisi ton adresse email</span>
@@ -44,7 +44,7 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-dark rounded-pill btn-sm">envoyer</button>
-                              
+
                             </form>
                         </div>
                     </div>
@@ -77,6 +77,29 @@
 
 </div>
 
+<div class="container">
+    <div class="row">
+            <div class="col-12 text-center mt-3 email-for-small">
+                <p>
+                    <span class="pret">Prêt(e) à te transformer ?</span><br>
+                    <span class="spaisi">Saisi ton adresse email</span>
+                </p>
+                <div class="col-md-12 col-lg-12 col-12">
+                    <form action="" method="post" novalidate class="text-left form-email">
+                        {% csrf_token %}
+                        <!-- Email input -->
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="form2Example1">E-mail</label>
+                            <input type="email" id="form2Example1" name="username" class="form-control" />
+                        </div>
+
+                        <button type="submit" class="btn btn-dark rounded-pill btn-block btn-sm">envoyer</button>
+
+                    </form>
+                </div>
+            </div>
+    </div>
+</div>
 
 
 
@@ -84,7 +107,7 @@
 <div class="container-fluid">
     <div class="row undertext text-center">
         <div class="col-md-12 col-12 col-sm-12">
-            <p class="pt-1 pb-1">l€ reversé à «Action contre la faim» pour chaque programme acheté !</p>
+            <p class="pt-1 pb-1 email-text-top">l€ reversé à «Action contre la faim» pour chaque programme acheté !</p>
         </div>
 
     </div>
@@ -105,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-7 col-12 col-sm-12 pt-5 video-small">
+            <div class="col-md-7 col-12 col-sm-12 pt-5 video-small email-box">
                 <div class="box">
                     <video allowfullscreen autoplay loop controls width="100%" class="bg-video"
                         poster="/static/images/maxresdefault.webp">
@@ -117,6 +140,24 @@
         </div>
     </div>
 </div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-12 pt-3 video-small email-for-small">
+            <div class="box">
+                <video allowfullscreen autoplay loop controls width="100%" class="bg-video"
+                    poster="/static/images/maxresdefault.webp">
+                    <source src="{% static 'videos/Présentation_du_programme(1080p).mp4' %}" type="video/mp4" />
+
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="container-fluid">
     <div class="container">
         <div class="row pt-5">
@@ -124,20 +165,73 @@
                 <img src="/static/images/DSC00878-1.jpg" class="portfolio-img portfolio-img-small" width="100%"
                     alt="Marketing Servies Online">
             </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 boxing email-for-small">
+                <p>
+                    <b>+ de muscles</b> <br>
+                    <b>+ de force</b> <br>
+                    <b>+ de performances</b> <br>
+                    <b> – de gras</b><br>
+                    <b>– de stress</b> <br>
+                <p>Séance de musculation en salle ou à la maison avec ou sans matériel <br></p>
+
+
+                A l’aide d’une <b>méthode optimisée</b>
+                </p>
+            </div>
             <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                 <img src="/static/images/DSC01358-scaled.jpg" class="portfolio-img portfolio-img-small" width="100%"
                     alt="Marketing Servies Online">
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 boxing email-for-small">
+                <p>
+                    <b>+ de résultats</b> <br>
+                    <b>– de prise de tête</b> <br>
+                <p>Respecte ta vie professionnelle, personnelle, tes objectifs et tes envies pour allier vie sociale et
+                    bien-être</p>
+
+
+                <b> le tout sur ton espace personnel </b>
+                </p>
             </div>
             <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                 <img src="/static/images/DSC01307-scaled.jpg" class="portfolio-img portfolio-img-small" width="100%"
                     alt="Marketing Servies Online">
             </div>
-            <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 boxing email-for-small">
+                <p>
+                    <b>Accès illimité</b> <br>
+                    <b>à 150 recettes</b> <br>
+                <p>
+                    Personnalisées
+                    Optimisées
+                    Classiques et Végan
+                </p>
+
+
+                Tout est calculé de manière précise en amont <br><br>
+
+                <b> + liste de course </b>
+                </p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 ">
                 <img src="/static/images/DSC01325-scaled.jpg" class="portfolio-img portfolio-img-small" width="100%"
                     alt="Marketing Servies Online">
             </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 boxing email-for-small">
+                <p>
+                    <b>Ostéopathe en dernier cycle</b> <br>
+                <p>
+                    + de contenu <br>
+                    + de conseils <br>
+                    + de bien-être, <br>
+                </p>
+
+                Pour apprendre à gérer ton <b>alimentation, ton activité physique et ta santé</b>
+
+                </p>
+            </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center email-box">
             <div class="col-12 col-sm-12 col-md-3 col-lg-3 boxing">
                 <p>
                     <b>+ de muscles</b> <br>
@@ -214,7 +308,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container small-container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

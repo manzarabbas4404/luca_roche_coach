@@ -87,6 +87,9 @@
     /* margin-bottom: 35% !important; */
 }
 
+.email-for-small{
+    display: none;
+}
 .roche {
     letter-spacing: 0.5px;
     text-align: left;
@@ -850,7 +853,7 @@ mark {
         margin-left: 4% !important;
     }
     .boxing {
-        height: 350px;
+        height: 330px;
         max-width: 90% !important;
         margin-top: 10%;
     }
@@ -886,7 +889,61 @@ mark {
         margin-top: 1%;
     }
     .body {
-        margin-top: 1%; 
+        margin-top: 1%;
+        background-position: 50% 50%;
+        background-size: 100%;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+    .paraone {
+        font-size: 16px;
+        font-weight: 700;
+        font-style: italic;
+        padding-left: 40%;
+        padding-top: 5%;
+    }
+    .paratwo {
+        font-size: 15px;
+        font-style: italic;
+        color: white;
+        font-weight: 700;
+        padding-left: 45%;
+    }
+    .pret {
+        font-size: 19px;
+    }
+    .email-box{
+        display: none;
+    }
+    .email-for-small{
+        display: block;
+    }
+    .email-text-top{
+        padding-bottom: 0 !important;
+        font-size: 15px;
+    }
+    .undertext{
+        margin-top: 2%;
+    }
+    .roche{
+        text-align: center;
+    }
+    .femme-two{
+        letter-spacing: normal;
+        font-size: 12px;
+    }
+    .femme{
+        font-size: 20px;
+    }
+    .small-container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .sep-middle{
+        border: none;
+    }
+    .taunt{
+        text-align: center ;
     }
     .box-text1 {
         margin-left: 0%;

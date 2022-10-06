@@ -26,7 +26,9 @@
     letter-spacing: 2px;
 
 }
-
+.nav-t{
+    display: none;
+}
 .nav-font-two {
     font-weight: 700;
     font-size: 25px;
@@ -850,7 +852,31 @@ mark {
     }
     .small-width{
         width: 13%;
-        margin-left: 4% !important;
+        margin-left: 0% !important;
+    }
+    .nav-font-three{
+        font-size: 13px;
+    }
+    .nav-font-two{
+        font-size: 15px;
+    }
+    .nav-font-one{
+        font-size: 17px;
+    }
+    .adjust-small{
+        margin-top: 2%;
+    }
+    .adjust-btn{
+        margin: 0 auto;
+    }
+    .ronded-nav{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .nav-t{
+        display: block;
     }
     .boxing {
         height: 330px;

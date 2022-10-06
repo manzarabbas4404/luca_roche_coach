@@ -2,23 +2,23 @@
 
     <img src="/static/images/LOGOOOO-copie-600x600.jpg" class="ml-4 small-width"  width="8%" alt="Marketing Servies Online" style="padding-top: 1%;padding-bottom: 1.5%;">
     
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupported" aria-controls="navbarSupported" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupported" aria-controls="navbarSupported" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupported">
+    <div class="collapse navbar-collapse" id="navbarSupported"> -->
 
-      <p class="ml-auto mr-auto text-center">
+      <p class="ml-auto mr-auto text-center adjust-small">
         <span class="nav-font-one"> LUCA ROCHE</span><br>
-        <span class="nav-font-two">“Coach sportif et ostéopathe en dernier cycle”</span><br>
+        <span class="nav-font-two">“Coach sportif et ostéopathe <br class="nav-t"> en dernier cycle”</span><br>
         <span class="nav-font-three">SPORT - NUTRITION - SANTE</span>
       </p>
- <div class="my-lg-0 text-center">
+ <div class="my-lg-0 text-center adjust-btn">
   {% if user.is_authenticated %}
-  <a href="{% url 'logout' %}" class="btn btn-dark rounded-pill">Se déconnecter</a>
+  <a href="{% url 'logout' %}" class="btn btn-dark rounded-pill ronded-nav">Se déconnecter</a>
   {% else  %}
-  <a href="{% url 'signup' %}" class="btn btn-dark rounded-pill">S'inscrire</a>
-  <a href="{% url 'login' %}" class="btn btn-dark rounded-pill" onclick = "hide()">Connexion</a>
+  <a href="{% url 'signup' %}" class="btn btn-dark rounded-pill ronded-nav">S'inscrire</a>
+  <a href="{% url 'login' %}" class="btn btn-dark rounded-pill ronded-nav" onclick = "hide()">Connexion</a>
   {% endif %}
     </div>
       <!-- <form class="form-inline my-2 my-lg-0">

@@ -54,6 +54,7 @@
 }
 
 .paratwo {
+    text-align: center;
     font-size: 20px;
     font-style: italic;
     color: white;
@@ -180,7 +181,7 @@ mark {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 20px;
     margin-bottom: 0px;
-    padding: 10px 10px 10px 10px;
+    /* padding: 10px 10px 10px 10px; */
 }
 
 .el-heading-title {
@@ -513,21 +514,20 @@ mark {
 /* The profile page style sheet */
 /* The side navigation menu */
 .sidebar {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 200px;
-    /* background-color: #f1f1f1; */
-    /* position: fixed; */
-    height: 100%;
     overflow: auto;
-    margin-left: 2%;
+    text-align: center;
+    box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 50%);
+    background-color: #f1f1f1bf;
 }
 
 /* Sidebar links */
 .sidebar a {
     display: block;
     color: black;
-    padding: 16px;
+    padding: 10px;
     text-decoration: none;
 
 }
@@ -662,7 +662,7 @@ mark {
         margin-top: 1%; 
     }
     .sidebar {
-        width: 100%;
+        width: 50%;
         height: auto;
         position: relative;
         margin: 0 auto;
@@ -728,7 +728,7 @@ mark {
     box-shadow: 0px 11px 10px -3px rgb(0 0 0 / 50%);
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     /* margin: 10px 10px 10px 10px; */
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 800;
     border-radius: 2rem;
     padding-top: 3%;
@@ -746,7 +746,7 @@ mark {
     box-shadow: 0px 11px 10px -3px rgb(0 0 0 / 50%);
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     /* margin: 10px 10px 10px 10px; */
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 800;
     border-radius: 2rem;
     width: 80%;
@@ -791,6 +791,45 @@ mark {
 }
 
 @media screen and (max-width:775px) {
+    .set-title{
+        font-size: 18px;
+    }
+    .number-box{
+        font-size: 90px;
+    }
+    .box-text2 {
+        font-size: 28px !important;
+    }
+    .nav-font-one{
+        font-weight: 1000;
+        font-size: 26px;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+    .nav-font-two {
+        font-weight: 700;
+        font-size: 17px;
+        font-style: italic;
+        letter-spacing: 0.5px;
+    }
+    .nav-font-three {
+        font-weight: 700;
+        font-size: 19px;
+        font-style: italic;
+        letter-spacing: 1.5px;
+    }
+    .ronded-nav {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .font-adj {
+        font-size: 35px;
+    }
+    .box-text {
+        font-size: 25px !important;
+    }
     .boxing {
         height: 450px;
     }
@@ -829,11 +868,17 @@ mark {
         margin-top: 1%; 
     }
     .box-text {
-        font-size: 40px;
+        font-size: 35px;
     }
 }
 
 @media screen and (max-width:525px) {
+    .st-img {
+        border-radius: 10px 10px 10px 10px;    
+    }
+    .img-scr{
+        padding: 0;
+    }
     .seprato{
         margin: 0 auto;
     }
@@ -879,9 +924,16 @@ mark {
         display: block;
     }
     .boxing {
-        height: 330px;
+        height: 250px;
         max-width: 90% !important;
         margin-top: 10%;
+        font-size: 14px;
+    }
+    .roche{
+        font-size: 18px;
+    }
+    .sm-font{
+        font-size: 18px;
     }
     .arrow{
         width: 35%;
@@ -930,10 +982,48 @@ mark {
     }
     .paratwo {
         font-size: 15px;
+        text-align: center;
         font-style: italic;
         color: white;
         font-weight: 700;
         padding-left: 45%;
+    }
+    .small-scr-center{
+        text-align: center;
+    }
+    .el-heading-title{
+        font-size: 20px;
+        letter-spacing: 1.3px;
+    }
+    .div-one-text{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .img-width-adjust{
+        width: 50%;
+    }
+    .access-sm-scr{
+        margin-top: 0 !important;
+    }
+    .sur-div{
+        margin-top: 0 !important;
+    }
+    .feather{
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .mark-tous{
+        font-size: 15px;
+    }
+    .tous{
+        font-size: 21px;
+    }
+    .for-italic{
+        font-size: 12px;
+    }
+    .form-email{
+        box-shadow: none !important;
+        padding: 0 !important;
     }
     .pret {
         font-size: 19px;
@@ -971,18 +1061,33 @@ mark {
     .taunt{
         text-align: center ;
     }
+    .first-p-bold {
+        font-size: 14px;
+    }
+    .cap-text {
+        font-size: 15px;
+        margin-top: 15% !important;
+        margin-bottom: 5% !important;
+    }
+    .trans-text{
+        font-size: 20px;
+    }
+    .assoc-text{
+        font-size: 18px;
+    }
+    .mark-two{
+        font-size: 17px;
+    }
     .box-text1 {
         margin-left: 0%;
         margin-right: 5%;
     }
 
     .box-text {
-        font-size: 40px;
+        font-size: 25px;
     }
 
-    .box-text2 {
-        font-size: 40px;
-    }
+
 
     .box-width {
         width: 98%;
@@ -992,11 +1097,25 @@ mark {
     .number-box {
         font-size: 50px;
         font-weight: 700;
+        max-width: 40%;
+        margin-top: 5%;
     }
 
     .img-width {
         width: 100%;
         margin-top: 5%;
+    }
+    .font-adj {
+        border-radius: 15px 15px 15px 15px;
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+        background-color: whitesmoke;
+        max-width: 45%;
+        margin: 0 auto;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 
 }

@@ -5,11 +5,11 @@
 {% block content %}
 <div class="container-fluid bg-set11">
     <div class="row text-center">
-        <div class="sidebar">
-            <a class="active" href="#home"> Kettlebell / Haltère</a>
-            <a href="#news">Sans Matériel</a>
-            <a href="#news">Elastique</a>
-           
+        <div class="sidebar" >
+            <a class="active" href="{% url 'video-sessions-kettlebel' %}"> Kettlebell / Haltère</a>
+            <a href="{% url 'video-sessions-poids-de-corps' %}">Sans Matériel</a>
+            <a href="{% url 'video-sessions' %}">Elastique</a>
+            
         </div>
 
     </div>

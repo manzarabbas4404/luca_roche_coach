@@ -1,0 +1,309 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  .form-login{
+    font-weight: 400 !important;
+    margin-top: 5%;
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-12 col-md-8 col-lg-8" style="margin: 0 auto;">
+
+
+      <form action="" method="post" novalidate class="text-left form-login">
+        <center>
+          <h3 class="pb-3">Registration Form:</h3>
+        </center>
+        {% csrf_token %}
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example1" style="font-weight: 500 !important;">Nom d'utilisateur</label>
+          <input type="text" id="form2Example1" name="name" class="form-control" />
+        </div>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example2" style="font-weight: 500 !important;">E-mail</label>
+          <input type="email" id="form2Example2" name="password" class="form-control" />
+        </div>
+
+        <center>
+          <h3 class="pb-3">Food Plan Table:</h3>
+        </center>
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau du plan alimentaire semaine 1</label>
+          <textarea class="form-label form-control" for="form2Example3" name="foodplansummaryweekone" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan alimentaire de la semaine 1</label>
+          <input type="file" name="foodplansummaryweekonechart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau du plan alimentaire semaine 2</label>
+          <textarea class="form-label form-control" for="form2Example3" name="foodplansummaryweektwo" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan alimentaire de la semaine 2</label>
+          <input type="file" name="foodplansummaryweektwochart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau du plan alimentaire semaine 3</label>
+          <textarea class="form-label form-control" for="form2Example3" name="foodplansummaryweekthree" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan alimentaire de la semaine 3</label>
+          <input type="file" name="foodplansummaryweekthreechart"  rows="5" />
+        </div>
+
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau du plan alimentaire semaine 4</label>
+          <textarea class="form-label form-control" for="form2Example3" name="foodplansummaryweekfour" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan alimentaire de la semaine 4</label>
+          <input type="file" name="foodplansummaryweekfourchart"  rows="5" />
+        </div>
+
+
+
+        <center>
+          <h3 class="pb-3">Training Plan Table:</h3>
+        </center>
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau de la semaine 1 du plan d'entraînement</label>
+          <textarea class="form-label form-control" for="form2Example3" name="trainingplansummaryweekone" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'entraînement de la semaine 1</label>
+          <input type="file" name="trainingplansummaryweekonechart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau de la semaine 2 du plan d'entraînement</label>
+          <textarea class="form-label form-control" for="form2Example3" name="trainingplansummaryweektwo" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'entraînement de la semaine 2</label>
+          <input type="file" name="trainingplansummaryweektwochart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau de la semaine 3 du plan d'entraînement</label>
+          <textarea class="form-label form-control" for="form2Example3" name="trainingplansummaryweekthree" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'entraînement de la semaine 3</label>
+          <input type="file" name="trainingplansummaryweekthreechart"  rows="5" />
+        </div>
+
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé du tableau de la semaine 4 du plan d'entraînement</label>
+          <textarea class="form-label form-control" for="form2Example3" name="trainingplansummaryweekfour" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'entraînement de la semaine 4</label>
+          <input type="file" name="trainingplansummaryweekfourchart"  rows="5" />
+        </div>
+
+
+
+
+        <center>
+          <h3 class="pb-3">Shopping Plan Table:</h3>
+        </center>
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé des achats Liste de la semaine 1</label>
+          <textarea class="form-label form-control" for="form2Example3" name="buyweekone" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'achat de la semaine 1</label>
+          <input type="file" name="buyweekonechart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé des achats Liste de la semaine 2</label>
+          <textarea class="form-label form-control" for="form2Example3" name="buyweektwo" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'achat de la semaine 2</label>
+          <input type="file" name="buyweektwochart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé des achats Liste de la semaine 3</label>
+          <textarea class="form-label form-control" for="form2Example3" name="buyweekthree" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'achat de la semaine 3</label>
+          <input type="file" name="buyweekthreechart"  rows="5" />
+        </div>
+
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Résumé des achats Liste de la semaine 4</label>
+          <textarea class="form-label form-control" for="form2Example3" name="buyweekfour" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Tableau du plan d'achat de la semaine 4</label>
+          <input type="file" name="buyweekfourchart"  rows="5" />
+        </div>
+
+
+
+
+        
+        <center>
+          <h3 class="pb-3">Progress Table:</h3>
+        </center>
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Récapitulatif des progrès sur 1 mois</label>
+          <textarea class="form-label form-control" for="form2Example3" name="prone" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Images avant 1 mois</label>
+          <input type="file" name="pronechart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Récapitulatif des progrès sur 2 mois</label>
+          <textarea class="form-label form-control" for="form2Example3" name="prtwo" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Images avant 2 mois</label>
+          <input type="file" name="prtwochart"  rows="5" />
+        </div>
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Récapitulatif des progrès sur 3 mois</label>
+          <textarea class="form-label form-control" for="form2Example3" name="prthree" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Images avant 3 mois</label>
+          <input type="file" name="prthreechart"  rows="5" />
+        </div>
+
+
+
+        <div class="form-outline mb-1">
+          <label class="form-label" for="form2Example3" rows="5">Récapitulatif des progrès sur 4 mois</label>
+          <textarea class="form-label form-control" for="form2Example3" name="prfour" rows="5">
+          </textarea>
+        </div>
+        <div class="form-outline mb-5">
+          <label class="form-label" for="form2Examp" rows="5">Images avant 4 mois</label>
+          <input type="file" name="prfourchart"  rows="5" />
+        </div>
+
+
+
+        <center>
+          <h3 class="pb-3">More Information:</h3>
+        </center>
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example3" rows="5">
+            Mes mesures et récapitulatif de la courbe de progression</label>
+          <textarea class="form-label form-control" for="form2Example3" name="exone" rows="5">
+          </textarea>
+        </div>
+
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example3" rows="5">
+            Le résumé de la courbe de progression</label>
+          <textarea class="form-label form-control" for="form2Example3" name="extwo" rows="5">
+          </textarea>
+        </div>
+
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example3" rows="5">
+            Repas proche du résumé de la formation</label>
+          <textarea class="form-label form-control" for="form2Example3" name="exthree" rows="5">
+          </textarea>
+        </div>
+
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example3" rows="5">
+            Données de recettes pré-post</label>
+          <textarea class="form-label form-control" for="form2Example3" name="exfour" rows="5">
+          </textarea>
+        </div>
+
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example3" rows="5">
+            Données de recettes In Case</label>
+          <textarea class="form-label form-control" for="form2Example3" name="exfive" rows="5">
+          </textarea>
+        </div>
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example3" rows="5">
+            Repas loin des données de recettes de formation</label>
+          <textarea class="form-label form-control" for="form2Example3" name="exsix" rows="5">
+          </textarea>
+        </div>
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example3" rows="5">
+            Données de recettes de desserts</label>
+          <textarea class="form-label form-control" for="form2Example3" name="exseven" rows="5">
+          </textarea>
+        </div>
+
+
+
+
+
+        <button type="submit" class="btn btn-dark rounded-pill">Connexion</button>
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Already have an Acoount? <a href="{% url 'login' %}">Login</a></p>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

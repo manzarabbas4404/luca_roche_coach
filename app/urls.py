@@ -15,10 +15,18 @@ urlpatterns = [
     path('cardio-hitt-session/',views.cardio, name='cardio'),
     path('gym-session/',views.gym, name='gym'),
     path('home-sessions/',views.home_session, name='home_session'),
+    path('my-measurements-and-my-progress-curve/',views.my_measurements_and_my_progress_curve, name='my_measurements_and_my_progress_curve'),
+    path('recipe_doc/',views.recipe_doc, name='recipe_doc'),
+    path('video-sessions-poids-de-corps/',views.video_sessions_poids_de_corps, name='video-sessions-poids-de-corps'),
+    path('video-sessions-kettlebel/',views.video_sessions_kettlebel, name='video-sessions-kettlebel'),
+    path('different-exercices-videos/',views.different_exercices_videos, name='different-exercices-videos'),
+    path('video-sessions/',views.video_sessions, name='video-sessions'),
     
+
     path('signup',views.signup_user, name='signup'),
     path('login',views.login_user, name='login'),
     path('logout',views.log_out, name='logout'),
+
 
     
     

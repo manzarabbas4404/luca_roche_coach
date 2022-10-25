@@ -16,14 +16,13 @@
 <div class="container-fluid bg-set3">
     <div class="row text-center">
         <div class="sidebar">
-            <a class="active" href="#home">Repas proche de l’entrainement</a>
-            <a href="#news">Pré/Post l’entrainement</a>
-            <a href="#contact">En cas</a>
-            <a href="#about">Petit-déjeuner</a>
-            <a href="#">Repas loin de l’entrainement</a>
-            <a href="#">Dessert</a>
-           
-        </div>
+            <a href="{% url 'recipe_doc' %}" class="active" >Repas proche de l’entrainement</a>
+            <a href="{% url 'recipe_doc' %}">Pré/Post l’entrainement</a>
+            <a href="{% url 'recipe_doc' %}">En cas</a>
+            <a href="{% url 'recipe_doc' %}">Petit-déjeuner</a>
+            <a href="{% url 'recipe_doc' %}">Repas loin de l’entrainement</a>
+            <a href="{% url 'recipe_doc' %}">Dessert</a>
+       </div>
 
     </div>
 </div>

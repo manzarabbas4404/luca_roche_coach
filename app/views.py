@@ -45,7 +45,30 @@ def gym(request):
     
 def home_session(request):
     return render(request, 'home-session.html')
+
+def my_measurements_and_my_progress_curve(request):
+    return render(request, 'my-measurements-and-my-progress-curve.html')
+
+def recipe_doc(request):
+    return render(request, 'recipe-doc.html')
    
+def different_exercices_videos(request):
+    return render(request, 'different_exercices_videos.html')
+
+def video_sessions_kettlebel(request):
+    return render(request, 'video_sessions_kettlebel.html')
+
+def video_sessions_poids_de_corps(request):
+    return render(request, 'video-sessions-poids-de-corps.html')
+
+def video_sessions(request):
+    return render(request, 'video-sessions.html')
+
+
+
+
+
+
 
 
 

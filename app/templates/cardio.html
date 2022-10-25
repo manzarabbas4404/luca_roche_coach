@@ -5,9 +5,9 @@
 {% block content %}
 <div class="container-fluid bg-set9">
     <div class="row text-center">
-        <div class="sidebar">
-            <a class="active" href="#home">Cardio</a>
-            <a href="#news">HIIT</a>
+        <div class="sidebar" style="margin: 1px;">
+            <a href="{% url 'recipe_doc' %}" class="active" href="#home">Cardio</a>
+            <a href="{% url 'recipe_doc' %}">HIIT</a>
            
         </div>
 

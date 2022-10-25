@@ -508,7 +508,75 @@ mark {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.bg-set12 {
+    background-color: #40A0E1;
+    margin-top: -1%;
+    background-image: url("../images/DSC01463-min-scaled.jpg");
+    /* Full height */
+    height: 100%;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    /* Center and scale the image nicely */
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-set13 {
+    background-color: #40A0E1;
+    margin-top: -1%;
+    background-image: url("../images/DSC01043-scaled.jpg");
+    /* Full height */
+    height: 100%;
+    padding-bottom: 25%;
+    padding-top: 20%;
+    /* Center and scale the image nicely */
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-set14 {
+    background-color: #40A0E1;
+    margin-top: -1%;
+    background-image: url("../images/DSC01386-scaled.jpg");
+    /* Full height */
+    height: 100%;
+    padding-bottom: 25%;
+    padding-top: 20%;
+    /* Center and scale the image nicely */
+    background-position: 30% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-boxes{
+    border-radius: 15px 15px 15px 15px;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #AAAAAA;
+    box-shadow: 7px 6px 7px 0px #bebebe;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 25px;
+    color: #070707;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1em;
+    /* letter-spacing: 0.4px; */
+    font-size: 28px;
+    margin-top: 5%;
+}
+.kettle-page{
+    margin: 0px 30px auto !important;
+}
 
+.doc-load{
+    margin: 0;
+    background-color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: inherit;
+    border-radius: 1rem;
+}
 
 
 /* The profile page style sheet */
@@ -516,11 +584,15 @@ mark {
 .sidebar {
     margin: 0 auto;
     padding: 0;
-    width: 200px;
+    width: 250px;
     overflow: auto;
     text-align: center;
     box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 50%);
     background-color: #f1f1f1bf;
+    font-size: 20px;
+    padding-bottom: 0.5%;
+    padding-top: 0%;
+    border-radius: 0.4rem;
 }
 
 /* Sidebar links */
@@ -529,6 +601,12 @@ mark {
     color: black;
     padding: 10px;
     text-decoration: none;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 50%);
+    text-decoration: none;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 0.3rem;
 
 }
 
@@ -728,7 +806,7 @@ mark {
     box-shadow: 0px 11px 10px -3px rgb(0 0 0 / 50%);
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     /* margin: 10px 10px 10px 10px; */
-    font-size: 35px;
+    font-size: 50px;
     font-weight: 800;
     border-radius: 2rem;
     padding-top: 3%;
@@ -746,7 +824,7 @@ mark {
     box-shadow: 0px 11px 10px -3px rgb(0 0 0 / 50%);
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     /* margin: 10px 10px 10px 10px; */
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 800;
     border-radius: 2rem;
     width: 80%;
@@ -791,6 +869,9 @@ mark {
 }
 
 @media screen and (max-width:775px) {
+    .text-boxes{
+        font-size: 20px !important;
+    }
     .set-title{
         font-size: 18px;
     }
@@ -873,6 +954,15 @@ mark {
 }
 
 @media screen and (max-width:525px) {
+    .kettle-page{
+        margin: 0 auto !important;
+    }
+    .comment-btn{
+        font-size: 13px !important;
+    }
+    .set-img-box{
+        max-width: 95% !important;
+    }
     .st-img {
         border-radius: 10px 10px 10px 10px;    
     }
@@ -1134,3 +1224,26 @@ mark {
     font-style: italic;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
 }
+.set-img-box{
+    box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 50%);
+    padding: 10px;
+    border-radius: 1rem;
+    width: 45%;
+    max-width: 45%;
+    margin: 0 auto;
+}
+.comment-btn{
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+    border-radius: 100px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+}
+.comment-btn:hover{
+    background-color: #000000;
+}
+/* .navbar{
+    box-shadow: 0px 0px 5px 5px rgb(0 0 0 / 30%);
+} */

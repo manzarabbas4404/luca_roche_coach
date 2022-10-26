@@ -35,12 +35,12 @@
                             <span class="spaisi">Saisi ton adresse email</span>
                         </p>
                         <div class="col-md-12 col-lg-12 col-12">
-                            <form action="" method="post" novalidate class="text-left form-email">
+                            <form action="email_submit/" method="post" novalidate class="text-left form-email">
                                 {% csrf_token %}
                                 <!-- Email input -->
                                 <div class="form-outline mb-1">
                                     <label class="form-label" for="form2Example1">E-mail</label>
-                                    <input type="email" id="form2Example1" name="username" class="form-control" />
+                                    <input type="email" id="form2Example1" name="email" class="form-control" />
                                 </div>
 
                                 <button type="submit" class="btn btn-dark rounded-pill btn-sm">commencer</button>
@@ -85,12 +85,12 @@
                     <span class="spaisi">Saisi ton adresse email</span>
                 </p>
                 <div class="col-md-12 col-lg-12 col-12">
-                    <form action="" method="post" novalidate class="text-left form-email">
+                    <form action="email_submit/" method="post" novalidate class="text-left form-email">
                         {% csrf_token %}
                         <!-- Email input -->
                         <div class="form-outline mb-1  small-scr-center">
                             <label class="form-label" for="form2Example1">E-mail</label>
-                            <input type="email" id="form2Example1" name="username" class="form-control" />
+                            <input type="email" id="form2Example1" name="email" class="form-control" />
                         </div>
 
                         <button type="submit" class="btn btn-dark rounded-pill btn-block btn-sm">commencer</button>

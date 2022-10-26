@@ -901,7 +901,7 @@ mark {
     }
     .ronded-nav {
         padding-left: 5px;
-        padding-right: 5px;
+        padding-right: 20px !important;
         padding-top: 3px;
         padding-bottom: 3px;
     }
@@ -954,6 +954,9 @@ mark {
 }
 
 @media screen and (max-width:525px) {
+    /* .luca-adjusted{
+        margin-left: 2% !important;
+    } */
     .kettle-page{
         margin: 0 auto !important;
     }
@@ -990,25 +993,32 @@ mark {
         margin-left: 0% !important;
     }
     .nav-font-three{
-        font-size: 13px;
+        font-size: 7px;
     }
     .nav-font-two{
-        font-size: 15px;
+        font-size: 9px;
     }
     .nav-font-one{
-        font-size: 17px;
+        font-size: 11px !important;
     }
     .adjust-small{
         margin-top: 2%;
     }
     .adjust-btn{
         margin: 0 auto;
+        text-align: end !important;
+    }
+    .luca-adjusted2{
+        width: 33% !important;
+        margin: 0 !important;
+        margin-left: -15% !important;
     }
     .ronded-nav{
         padding-left: 5px;
-        padding-right: 5px;
+        padding-right: 5px !important;
         padding-top: 3px;
         padding-bottom: 3px;
+        font-size: 10px;
     }
     .nav-t{
         display: block;
@@ -1244,6 +1254,6 @@ mark {
 .comment-btn:hover{
     background-color: #000000;
 }
-/* .navbar{
-    box-shadow: 0px 0px 5px 5px rgb(0 0 0 / 30%);
-} */
+.ronded-nav {
+    padding-right: 30px;
+}

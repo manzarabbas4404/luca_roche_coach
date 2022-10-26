@@ -21,6 +21,9 @@ urlpatterns = [
     path('video-sessions-kettlebel/',views.video_sessions_kettlebel, name='video-sessions-kettlebel'),
     path('different-exercices-videos/',views.different_exercices_videos, name='different-exercices-videos'),
     path('video-sessions/',views.video_sessions, name='video-sessions'),
+    path('email_submit/',views.email_submit, name='email_submit'),
+
+    
     
 
     path('signup',views.signup_user, name='signup'),

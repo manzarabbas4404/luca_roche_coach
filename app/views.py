@@ -64,6 +64,13 @@ def video_sessions_poids_de_corps(request):
 def video_sessions(request):
     return render(request, 'video-sessions.html')
 
+def email_submit(request):
+    if request.method=='POST':
+        email = request.POST['email']
+        return redirect('signup')
+    
+
+
 
 
 

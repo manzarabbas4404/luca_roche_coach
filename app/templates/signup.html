@@ -13,35 +13,53 @@
     min-width: 300px;
 
   }
+
   @media screen and (max-width:775px) {
+    .col-form-label {
+    background-color: black;
+    color: white;
+    font-size: 15px !important;
+    border-radius: 1rem;
+    font-weight: 600 !important;
+}
     #regForm {
       padding: 0px;
       width: 85%;
       /* min-width: 100%; */
       padding-top: 7% !important;
-  }
-  .register-heading {
-    color: #000000;
-    font-size: 45px !important;
-  }
-  .under-heading{
-    font-size: 25px !important;
-  }
-  .add-p{
-  font-size: 30px !important;
-}
-.step3-head{
-  font-size: 30px !important;
-}
-.price-cut{
-  font-size: 55px !important;
-}
-.green-head {
-font-size: 60px !important;
-}
-.vl {
-  height: 225px !important;
-}
+    }
+
+    .register-heading {
+      color: #000000;
+      font-size: 45px !important;
+    }
+
+    .under-heading {
+      font-size: 25px !important;
+    }
+    .under-heading2 {
+      font-size: 30px !important;
+    }
+
+    .add-p {
+      font-size: 30px !important;
+    }
+
+    .step3-head {
+      font-size: 30px !important;
+    }
+
+    .price-cut {
+      font-size: 55px !important;
+    }
+
+    .green-head {
+      font-size: 60px !important;
+    }
+
+    .vl {
+      height: 225px !important;
+    }
   }
 
   @media screen and (max-width:525px) {
@@ -50,48 +68,62 @@ font-size: 60px !important;
       width: 100%;
       min-width: 100%;
       padding-top: 7% !important;
+    }
+
+    .register-heading {
+      color: #000000;
+      font-size: 25px !important;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .under-heading {
+      font-size: 15px !important;
+    }
+    .under-heading2 {
+      font-size: 18px !important;
+    }
+
+    .set-btn {
+      padding: 0;
+    }
+
+    .email-field {
+      padding: 25px !important;
+      background-color: #f4f4f4;
+      margin: 0px !important;
+      margin-top: 25px !important;
+      margin-bottom: 25px !important;
+    }
+
+    .add-p {
+      font-size: 15px !important;
+    }
+
+    .step3-head {
+      font-size: 25px !important;
+    }
+
+    .price-cut {
+      font-size: 25px !important;
+    }
+
+    .fa-caret-down {
+      font-size: 50px !important;
+    }
+
+    .green-head {
+      font-size: 30px !important;
+    }
+
+    .vl {
+      height: 100px !important;
+    }
+
+    .stepping {
+      margin-top: 5% !important;
+    }
   }
-  .register-heading {
-    color: #000000;
-    font-size: 25px !important;
-    font-weight: 900;
-    font-style: italic;
-  }
-  .under-heading{
-    font-size: 15px !important;
-  }
-  .set-btn{
-    padding: 0;
-  }
-  .email-field {
-    padding: 25px !important;
-    background-color: #f4f4f4;
-    margin: 0px !important;
-    margin-top: 25px !important;
-    margin-bottom: 25px !important;
-}
-.add-p{
-  font-size: 15px !important;
-}
-.step3-head{
-  font-size: 25px !important;
-}
-.price-cut{
-  font-size: 25px !important;
-}
-.fa-caret-down{
-  font-size: 50px !important;
-}
-.green-head {
-font-size: 30px !important;
-}
-.vl {
-  height: 100px !important;
-}
-.stepping{
-  margin-top: 5% !important;
-}
-}
 
   /* Style the input fields */
   input {
@@ -157,6 +189,12 @@ font-size: 30px !important;
     line-height: 1.2em;
     letter-spacing: 0.9px;
   }
+  .under-heading2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-decoration: underline !important;
+  }
+ 
 
   .step3 {
     border-radius: 20px 20px 20px 20px;
@@ -206,12 +244,20 @@ font-size: 30px !important;
     font-weight: 900;
     font-style: italic;
   }
-  .email-field{
+
+  .email-field {
     padding: 50px;
     background-color: #f4f4f4;
     margin: 100px;
     margin-top: 50px;
     margin-bottom: 30px;
+  }
+  .col-form-label{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 1rem;
+    font-weight: 700;
   }
 </style>
 
@@ -221,28 +267,50 @@ font-size: 30px !important;
 
 
       <form id="regForm" action="" class="text-center" style="margin: 0 auto;">
+
+
+
+
         <div class="tab">
           <h2 class="register-heading">ETAPE 1 SUR 3</h2>
-          <h2 class="under-heading pt-3">Complète la configuration de ton programme</h2>
-          <h2 class="under-heading pt-3">Le programme est une expérience personnalisée selon tes goûts</h2>
-          <h2 class="under-heading pt-3">commence pas la création de ton compte</h2>
+          <h2 class="under-heading pt-4">Complète la configuration de ton programme</h2>
+          <h2 class="under-heading pt-4">Le programme est une expérience personnalisée selon tes goûts</h2>
+          <h2 class="under-heading pt-4">commence pas la création de ton compte</h2>
+        </div>
+
+        <div class="tab">
+          <h2 class="register-heading">ETAPE 1 SUR 3</h2>
+          <h2 class="under-heading pt-3">Créer ton mot de passe pour démarrer</h2>
+          <h2 class="under-heading pt-3">Plus que quelques étapes..</h2>
+
+          <div class="mt-5 mb-5">
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">Email</label>
+            <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
+              <input type="email" class="form-control" id="inputPassword" style="border: 2px solid;">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">mot de passe </label>
+            <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
+              <input type="password" class="form-control" id="inputPassword" style="border: 2px solid;">
+            </div>
+          </div>
+        </div>
+
         </div>
 
         <div class="tab">
           <h2 class="register-heading">ETAPE 2 SUR 3</h2>
-          <h2 class="under-heading pt-3">Saisie ton adresse mail</h2>
-          <h2 class="under-heading pt-3">Plus que quelques étapes..</h2>
-
-          <div class="email-field"
-            style="">
-            <input type="email" class="form-control" placeholder="Email*" name="user_email" id="user_email" require>
-          </div>
-
+          <h2 class="under-heading pt-4">Choisis ton programe</h2>
+          <h2 class="under-heading pt-4">Accés illimité sur tous tes appareils</h2>
+          <h2 class="under-heading pt-4">Guide et soutiens pour ton objectif</h2>
+          <h2 class="under-heading pt-4">Toutes les dernières connaissances en science du sport et de la nutrition</h2>
         </div>
 
 
         <div class="tab">
-          <h2 class="register-heading">ETAPE 3 SUR 3</h2>
+          <h2 class="register-heading">ETAPE 2 SUR 3</h2>
           <!--here-->
           <p class="add-p">Clique sur ton programme et poursuis ton inscription</p>
 
@@ -257,36 +325,45 @@ font-size: 30px !important;
 
           <div class="row mt-5">
             <div class="col-5 col-md-5 col-lg-5">
-              <h2 class="price-cut">300€</h2>
+              <h2 class="price-cut">180€</h2>
               <i aria-hidden="true" class="fas fa-caret-down" style="font-size: 100px;"></i>
-              <h1 class="green-head">150€</h1>
+              <h1 class="green-head">120€</h1>
             </div>
             <div class="col-2 col-md-2 col-lg-2">
               <div class="vl" style="margin: 0 auto;"></div>
             </div>
             <div class="col-5 col-md-5 col-lg-5">
-              <h2 class="price-cut">350€</h2>
+              <h2 class="price-cut">240€</h2>
               <i aria-hidden="true" class="fas fa-caret-down" style="font-size: 100px;"></i>
-              <h1 class="green-head">175€</h1>
+              <h1 class="green-head">170€</h1>
             </div>
           </div>
           <!--to here-->
-          <div style="margin: 0 auto;" class="col-8 col-md-6 col-lg-6 text-center mt-4">
 
-            <span>
-              <button type="submit"  class="btn btn-primary btn-lg btn-block mt-2 set-btn"
-                style="background-color: grey;">Soumettre</button>
-            </span>
-  
-          </div>
         </div>
 
 
+        <div class="tab">
+          <h2 class="register-heading">ETAPE 3 SUR 3</h2>
+          <h2 class="under-heading pt-4">Ton programme commence</h2>
+          <h2 class="under-heading pt-3 under-heading2">48H après le paiement</h2>
+          <h2 class="under-heading pt-4 ">(paiement sécurisé)</h2>
+          <h2 class="under-heading pt-4 box mt-5 mb-3">payment <br> method <br> .</h2>
+          <div style="margin: 0 auto;" class="col-8 col-md-6 col-lg-6 text-center mt-4">
+
+            <span>
+              <button type="submit" class="btn btn-primary btn-lg btn-block mt-2 set-btn"
+                style="background-color: black; border-radius: 2rem;">Soumettre</button>
+            </span>
+
+          </div>
+        </div>
         <div style="margin: 0 auto;" class="col-8 col-md-6 col-lg-6 text-center mt-4">
 
           <span>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)" class="btn btn-primary btn-lg btn-block mt-2 set-btn"
-              style="background-color: grey;">Suivant</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)"
+              class="btn btn-primary btn-lg btn-block mt-2 set-btn"
+              style="background-color: black;border-radius: 2rem">Suivant</button>
           </span>
 
         </div>
@@ -294,6 +371,7 @@ font-size: 30px !important;
 
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:15px;">
+          <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>

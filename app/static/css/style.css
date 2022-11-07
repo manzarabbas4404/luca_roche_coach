@@ -48,7 +48,7 @@
 }
 
 .paraone {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     font-style: italic;
 }
@@ -62,7 +62,7 @@
 }
 
 .pret {
-    font-size: 26px;
+    font-size: 23px;
     font-style: italic;
     color: black;
     font-weight: 800;
@@ -106,7 +106,7 @@
 
 .taunt {
     line-height: 2.5;
-    text-align: left;
+    text-align: center;
     font-family: "Poppins", Sans-serif;
     font-size: 27px;
     font-weight: 800;
@@ -1074,19 +1074,19 @@ mark {
         padding-bottom: 0%;
     }
     .paraone {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         font-style: italic;
-        padding-left: 40%;
+        padding-left: 35%;
         padding-top: 5%;
     }
     .paratwo {
-        font-size: 15px;
+        font-size: 13px;
         text-align: center;
         font-style: italic;
         color: white;
         font-weight: 700;
-        padding-left: 45%;
+        padding-left: 40%;
     }
     .small-scr-center{
         text-align: center;

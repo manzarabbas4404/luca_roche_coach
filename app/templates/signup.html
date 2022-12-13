@@ -16,12 +16,13 @@
 
   @media screen and (max-width:775px) {
     .col-form-label {
-    background-color: black;
-    color: white;
-    font-size: 15px !important;
-    border-radius: 1rem;
-    font-weight: 600 !important;
-}
+      background-color: black;
+      color: white;
+      font-size: 15px !important;
+      border-radius: 1rem;
+      font-weight: 600 !important;
+    }
+
     #regForm {
       padding: 0px;
       width: 85%;
@@ -37,6 +38,7 @@
     .under-heading {
       font-size: 25px !important;
     }
+
     .under-heading2 {
       font-size: 30px !important;
     }
@@ -80,6 +82,7 @@
     .under-heading {
       font-size: 15px !important;
     }
+
     .under-heading2 {
       font-size: 18px !important;
     }
@@ -189,12 +192,13 @@
     line-height: 1.2em;
     letter-spacing: 0.9px;
   }
+
   .under-heading2 {
     font-size: 50px;
     font-weight: 700;
     text-decoration: underline !important;
   }
- 
+
 
   .step3 {
     border-radius: 20px 20px 20px 20px;
@@ -252,7 +256,8 @@
     margin-top: 50px;
     margin-bottom: 30px;
   }
-  .col-form-label{
+
+  .col-form-label {
     background-color: black;
     color: white;
     font-size: 20px;
@@ -262,11 +267,13 @@
 </style>
 
 <div class="container">
+  <input class="setValue" type="hidden" value="dfs">
   <div class="row overall mt-5">
     <div class="col-12 col-md-12 col-lg-12" style="margin: 0 auto;">
 
 
-      <form id="regForm" action="" class="text-center" style="margin: 0 auto;">
+      <form id="" action="" class="text-center" style="margin: 0 auto;">
+
 
 
 
@@ -284,19 +291,21 @@
           <h2 class="under-heading pt-3">Plus que quelques étapes..</h2>
 
           <div class="mt-5 mb-5">
-          <div class="form-group row">
-            <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">Email</label>
-            <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
-              <input type="email" class="form-control" id="inputPassword" style="border: 2px solid;">
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label"
+                style="margin: 0 auto;">Email</label>
+              <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
+                <input type="email" class="form-control" id="inputPassword" style="border: 2px solid;">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">mot de
+                passe </label>
+              <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
+                <input type="password" class="form-control" id="inputPassword" style="border: 2px solid;">
+              </div>
             </div>
           </div>
-          <div class="form-group row">
-            <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">mot de passe </label>
-            <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
-              <input type="password" class="form-control" id="inputPassword" style="border: 2px solid;">
-            </div>
-          </div>
-        </div>
 
         </div>
 
@@ -313,7 +322,7 @@
           <h2 class="register-heading">ETAPE 2 SUR 3</h2>
           <!--here-->
           <p class="add-p">Clique sur ton programme et poursuis ton inscription</p>
-
+          <!-- 
           <div class="row">
             <div class="col-12 col-md-5 col-lg-5 step3">
               <h2 class="step3-head" style="padding: 15%;">Classic challenge <br> 3 MOIS</h2>
@@ -321,21 +330,163 @@
             <div class="col-12 col-md-5 col-lg-5 step3 stepping">
               <h2 class="step3-head" style="padding: 15%;">Perform challenge <br>3 MOIS<br></h2>
             </div>
-          </div>
+          </div> -->
 
           <div class="row mt-5">
-            <div class="col-5 col-md-5 col-lg-5">
-              <h2 class="price-cut">180€</h2>
-              <i aria-hidden="true" class="fas fa-caret-down" style="font-size: 100px;"></i>
-              <h1 class="green-head">120€</h1>
+            <div class="col-lg-4 col-md-4 my-3 my-md-0 my-lg-0">
+              <div class="card" style="border-top: none;">
+                <input type="hidden" class="carr" name="carr" value="150" />
+                <div style="border-radius: 5px 5px 0 0;
+                background-color: grey;
+                padding: 0 !important;">
+                  <h5 class="py-lg-2 text-white pt-lg-3 py-md-2 pt-md-3 p-2 pt-3"><strong>1 mois</strong></h5>
+                </div>
+
+
+                <h4 style="color: #8cce8c;" class="py-lg-4 pb-lg-3 py-md-4 pb-md-3 py-3 pb-2"><strong>
+                    150€ Prix</strong></h4>
+
+                <h6 class="px-lg-4 mx-lg-5 px-md-2 mx-md-2 px-3">150€ / mois</h6>
+
+                <h6 class="px-lg-5 px-md-1 px-2 pt-lg-2"><strong>Paiement une fois </strong></h6>
+
+                <h5 class="py-lg-2 py-md-1 py-1"><strong style="font-weight: 800;">Renouvelable </strong>
+                </h5>
+
+                <form>
+                  <div style="color: #8cce8c;">
+                    <p class="px-lg-3 px-md-2 px-2">Sssssssatisfait ou remboursé </p>
+                    <span>
+                      <h5 class="form-switch">
+                        <input class="form-check-input custom-control-input" style="margin-right: 2%; margin-top: 0.5%;"
+                          type="checkbox" name="roku" value="Yes" checked>
+                        <span class="fw-bold">Homme / Femme </span>
+                      </h5>
+                    </span>
+                    <p>Accompagnement nutrition</p>
+                    <p>Accompagnement musculation</p>
+                    <p>Suivi quotidien </p>
+                  </div>
+
+                  <input type="hidden" value="{{product.id}}" name="product">
+
+                  <div class="py-lg-3 py-3">
+                    <button type="button"
+                      class="btn btn-secondary rounded-pill bg-color px-lg-5 px-md-4 my-md-1 maintenant">Achetez
+                      maintenant
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right mx-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="col-2 col-md-2 col-lg-2">
-              <div class="vl" style="margin: 0 auto;"></div>
+
+            <div class="col-lg-4 col-md-4 my-3 my-md-0 my-lg-0">
+              <div class="card" style="border-top: none;">
+                <input type="hidden" class="carr" name="carr" value="390" />
+                <div style="border-radius: 5px 5px 0 0;
+                background-color: grey;
+                padding: 0 !important;">
+                  <h5 class="py-lg-2 text-white pt-lg-3 py-md-2 pt-md-3 p-2 pt-3"><strong>3 mois</strong></h5>
+                </div>
+
+                <h4 style="color: #8cce8c;" class="py-lg-4 pb-lg-3 py-md-4 pb-md-3 py-3 pb-2"><strong>
+                    390€ Prix</strong></h4>
+
+                <h6 class="px-lg-4 mx-lg-5 px-md-2 mx-md-2 px-3">130€ / mois </h6>
+
+                <h6 class="px-lg-5 px-md-1 px-2 pt-lg-2"><strong>Paiement 1 ou 3 fois </strong></h6>
+
+                <h5 class="py-lg-2 py-md-1 py-1"><strong style="font-weight: 800;">Renouvelable </strong>
+                </h5>
+
+                <form action="#">
+                  {% csrf_token %}
+                  <div style="color: #8cce8c;">
+                    <p class="px-lg-3 px-md-2 px-2">Satisfait ou remboursé </p>
+                    <span>
+                      <h5 class="form-switch">
+                        <input class="form-check-input custom-control-input" style="margin-right: 2%; margin-top: 0.5%;"
+                          type="checkbox" name="roku" value="Yes" checked>
+                        <span class="fw-bold">Homme / Femme </span>
+                      </h5>
+                    </span>
+                    <p>Accompagnement nutrition</p>
+                    <p>Accompagnement musculation</p>
+                    <p>Suivi quotidien </p>
+                  </div>
+
+                  <input type="hidden" value="{{product.id}}" name="product">
+
+                  <div class="py-lg-3 py-3">
+                    <button type="button"
+                      class="btn btn-secondary rounded-pill bg-color px-lg-5 px-md-4 my-md-1 maintenant">Achetez
+                      maintenant
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right mx-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="col-5 col-md-5 col-lg-5">
-              <h2 class="price-cut">240€</h2>
-              <i aria-hidden="true" class="fas fa-caret-down" style="font-size: 100px;"></i>
-              <h1 class="green-head">170€</h1>
+
+            <div class="col-lg-4 col-md-4 my-3 my-md-0 my-lg-0">
+              <div class="card" style="border-top: none;">
+                <input type="hidden" class="carr" name="carr" value="600" />
+                <div style="border-radius: 5px 5px 0 0;
+                background-color: grey;
+                padding: 0 !important;">
+                  <h5 class="py-lg-2 text-white pt-lg-3 py-md-2 pt-md-3 p-2 pt-3"><strong>6 mois</strong></h5>
+                </div>
+
+                <h4 style="color: #8cce8c;" class="py-lg-4 pb-lg-3 py-md-4 pb-md-3 py-3 pb-2"><strong>
+                    600€ Prix</strong></h4>
+
+                <h6 class="px-lg-4 mx-lg-5 px-md-2 mx-md-2 px-3">100€ / mois </h6>
+
+                <h6 class="px-lg-5 px-md-1 px-2 pt-lg-2"><strong>Paiement 1 ou 6 fois </strong></h6>
+
+                <h5 class="py-lg-2 py-md-1 py-1"><strong style="font-weight: 800;">Renouvelable </strong>
+                </h5>
+
+                <form action="#">
+                  {% csrf_token %}
+                  <div style="color: #8cce8c;">
+                    <p class="px-lg-3 px-md-2 px-2">Satisfait ou remboursé </p>
+                    <span>
+                      <h5 class="form-switch">
+                        <input class="form-check-input custom-control-input" style="margin-right: 2%; margin-top: 0.5%;"
+                          type="checkbox" name="roku" value="Yes" checked>
+                        <span class="fw-bold">Homme / Femme </span>
+                      </h5>
+                    </span>
+                    <p>Accompagnement nutrition</p>
+                    <p>Accompagnement musculation</p>
+                    <p>Suivi quotidien </p>
+                  </div>
+
+                  <input type="hidden" value="{{product.id}}" name="product">
+
+                  <div class="py-lg-3 py-3">
+                    <button type="button"
+                      class="btn btn-secondary rounded-pill bg-color px-lg-5 px-md-4 my-md-1 maintenant">Achetez
+                      maintenant
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right mx-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <!--to here-->
@@ -343,6 +494,13 @@
         </div>
 
 
+
+        <div class="tab">
+          <div class="row text-center">
+
+
+          </div>
+        </div>
         <div class="tab">
           <h2 class="register-heading">ETAPE 3 SUR 3</h2>
           <h2 class="under-heading pt-4">Ton programme commence</h2>
@@ -460,4 +618,84 @@
     x[n].className += " active";
   }
 </script>
+
+
+
+<script type="text/javascript">
+
+  $('.maintenant').click(function () {
+    var price = $(this).closest("div.card").find("input[name='carr']").val();
+    $('.setValue').val(price);
+    $('#gotoPayment').modal('show');
+  });
+
+
+</script>
+
+<div class="modal" id="gotoPayment" aria-labelledby="gotoPayment" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalToggleLabel2">Payment Method</h5> -->
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+
+      <div class="modal-body">
+        <div id="smart-button-container">
+          <div style="text-align: center;">
+            <div id="paypal-button-container">
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+
+              <script
+                src="https://www.paypal.com/sdk/js?client-id=AY9SGvpHsPOEgegu4CXDuxAPhXPwpz9RovJpkYRL9AFJI3X408Jg5q9kos7YCJ01igvNbmbz4-OM_qWk&currency=GBP"
+                data-sdk-integration-source="button-factory"></script>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+              <script>
+                function initPayPalButton() {
+                  paypal.Buttons({
+                    style: {
+                      shape: 'pill',
+                      color: 'gold',
+                      layout: 'vertical',
+                      label: 'paypal',
+                    },
+                    createOrder: function (data, actions) {
+                      return actions.order.create({
+                        purchase_units: [{ "amount": { "currency_code": "GBP", "value": $('.setValue').val() } }]
+                      });
+                    },
+                    onApprove: function (data, actions) {
+                      return actions.order.capture().then(function (orderData) {
+
+                        // Full available details
+                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                        console.log("status", orderData.status)
+                        alert('Thank you for your payment!')
+                      });
+                    },
+                    onError: function (err) {
+                      console.log(err);
+                    }
+                  }).render('#paypal-button-container');
+                }
+                initPayPalButton();
+              </script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
 {% endblock %}

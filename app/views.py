@@ -4,6 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from . models import *
+from .forms import SignUpForm
 
 # Create your views here.
 
@@ -194,3 +195,15 @@ def login_user(request):
 def log_out(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+
+# def signup_usr(request):
+#     if request.method=='POST':
+#         fm=SignUpForm(request.POST)
+#         if fm.is_valid():
+#             fm.save()
+#             messages.success(request,'Account has been created successfully.')
+#             return redirect('login')
+#     else:
+#         fm=SignUpForm()
+#     return render(request,'mobileapplication/signup.html',{'form':fm})

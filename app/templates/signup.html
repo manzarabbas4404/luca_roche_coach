@@ -272,13 +272,13 @@
     <div class="col-12 col-md-12 col-lg-12" style="margin: 0 auto;">
 
 
-      <form id="" action="" class="text-center" style="margin: 0 auto;">
+      <!-- <form id="" action="" class="text-center" style="margin: 0 auto;"> -->
 
 
 
 
 
-        <div class="tab">
+        <div class="tab text-center">
           <h2 class="register-heading">ETAPE 1 SUR 3</h2>
           <h2 class="under-heading pt-4">Complète la configuration de ton programme</h2>
           <h2 class="under-heading pt-4">Le programme est une expérience personnalisée selon tes goûts</h2>
@@ -290,26 +290,29 @@
           <h2 class="under-heading pt-3">Créer ton mot de passe pour démarrer</h2>
           <h2 class="under-heading pt-3">Plus que quelques étapes..</h2>
 
+          <form action="/subscription/" method="post" id="orderform">
+            {% csrf_token %}
           <div class="mt-5 mb-5">
             <div class="form-group row">
               <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label"
                 style="margin: 0 auto;">Email</label>
               <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
-                <input type="email" class="form-control" id="inputPassword" style="border: 2px solid;">
+                <input type="email" name="email" class="form-control" id="inputPassword" style="border: 2px solid;">
               </div>
             </div>
             <div class="form-group row">
               <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">mot de
                 passe </label>
               <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
-                <input type="password" class="form-control" id="inputPassword" style="border: 2px solid;">
+                <input type="password" name="password" class="form-control" id="inputPassword" style="border: 2px solid;">
               </div>
+              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
             </div>
           </div>
-
+        </form>
         </div>
 
-        <div class="tab">
+        <div class="tab text-center">
           <h2 class="register-heading">ETAPE 2 SUR 3</h2>
           <h2 class="under-heading pt-4">Choisis ton programe</h2>
           <h2 class="under-heading pt-4">Accés illimité sur tous tes appareils</h2>
@@ -318,7 +321,7 @@
         </div>
 
 
-        <div class="tab">
+        <div class="tab text-center">
           <h2 class="register-heading">ETAPE 2 SUR 3</h2>
           <!--here-->
           <p class="add-p">Clique sur ton programme et poursuis ton inscription</p>
@@ -536,7 +539,7 @@
 
         </div>
 
-      </form>
+      <!-- </form> -->
 
     </div>
   </div>
@@ -653,7 +656,7 @@
                 crossorigin="anonymous"></script>
 
               <script
-                src="https://www.paypal.com/sdk/js?client-id=AY9SGvpHsPOEgegu4CXDuxAPhXPwpz9RovJpkYRL9AFJI3X408Jg5q9kos7YCJ01igvNbmbz4-OM_qWk&currency=GBP"
+                src="https://www.paypal.com/sdk/js?client-id=AWOsCt84k13qZI7gEgFrMn3y2bHpsLMGLJE1pJLGm1XCLUCVEbNfMRF7AP7SrZjbHlL7-m6_gdmnGUXu&currency=GBP"
                 data-sdk-integration-source="button-factory"></script>
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
               <script>
@@ -666,6 +669,7 @@
                       label: 'paypal',
                     },
                     createOrder: function (data, actions) {
+                      document.getElementById("orderform").submit()
                       return actions.order.create({
                         purchase_units: [{ "amount": { "currency_code": "GBP", "value": $('.setValue').val() } }]
                       });

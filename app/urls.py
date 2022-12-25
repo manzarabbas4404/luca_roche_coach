@@ -22,6 +22,7 @@ urlpatterns = [
     path('different-exercices-videos/',views.different_exercices_videos, name='different-exercices-videos'),
     path('video-sessions/',views.video_sessions, name='video-sessions'),
     path('email_submit/',views.email_submit, name='email_submit'),
+    path('subscription/',views.signup_user, name='subscription'),
 
     
     

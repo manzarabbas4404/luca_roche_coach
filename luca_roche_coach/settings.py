@@ -37,8 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
     'app',
 ]
+
+# CKEDITOR_UPLOAD_PREFIX = 'static/uploads/'
+# CKEDITOR_UPLOAD_PATH = "static/uploads/"
+CKEDITOR_UPLOAD_PATH = 'ck-uploads/'
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +63,7 @@ ROOT_URLCONF = 'luca_roche_coach.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,3 +132,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+CKEDITOR_UPLOAD_PATH = '/static/'

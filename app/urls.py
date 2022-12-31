@@ -1,9 +1,11 @@
 from django.urls import path
 from . import views
+# from .views import HomePageView
 
 urlpatterns = [
     path('',views.index, name='index'),
     path('profile/',views.profile, name='profile'),
+    # path('profile/<slug:manzar>/<int:1>/',HomePageView.as_view(), name='profile'),
     path('myprogram/',views.myprogram, name='myprogram'),
     path('shoppinglist/',views.shoppinglist, name='shoppinglist'),
     path('recipes/',views.recipes, name='recipes'),
@@ -23,6 +25,8 @@ urlpatterns = [
     path('video-sessions/',views.video_sessions, name='video-sessions'),
     path('email_submit/',views.email_submit, name='email_submit'),
     path('subscription/',views.signup_user, name='subscription'),
+
+    
 
     
     

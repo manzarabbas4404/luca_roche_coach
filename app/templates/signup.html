@@ -266,6 +266,7 @@
   }
 </style>
 
+
 <div class="container">
   <input class="setValue" type="hidden" value="dfs">
   <div class="row overall mt-5">
@@ -285,26 +286,35 @@
           <h2 class="under-heading pt-4">commence pas la création de ton compte</h2>
         </div>
 
-        <div class="tab">
+        <div class="tab text-center">
           <h2 class="register-heading">ETAPE 1 SUR 3</h2>
           <h2 class="under-heading pt-3">Créer ton mot de passe pour démarrer</h2>
           <h2 class="under-heading pt-3">Plus que quelques étapes..</h2>
 
-          <form action="/subscription/" method="post" id="orderform">
+          <form action="signup" method="post" id="orderform">
             {% csrf_token %}
           <div class="mt-5 mb-5">
             <div class="form-group row">
               <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label"
                 style="margin: 0 auto;">Email</label>
               <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
-                <input type="email" name="email" class="form-control" id="inputPassword" style="border: 2px solid;">
+                {{fm.username}} 
               </div>
             </div>
             <div class="form-group row">
               <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">mot de
                 passe </label>
               <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
-                <input type="password" name="password" class="form-control" id="inputPassword" style="border: 2px solid;">
+                <!-- <input type="password" name="password" class="form-control" id="inputPassword" style="border: 2px solid;"> -->
+                {{fm.password1}}
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-4 col-lg-4 col-9 col-form-label" style="margin: 0 auto;">Confirmez mot de
+                passe </label>
+              <div class="col-md-8 col-lg-8 col-11" style="margin: 0 auto;">
+                <!-- <input type="password" name="password" class="form-control" id="inputPassword" style="border: 2px solid;"> -->
+                {{fm.password2}}
               </div>
               <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
             </div>
@@ -661,6 +671,7 @@
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
               <script>
                 function initPayPalButton() {
+                  // document.getElementById("orderform").submit()
                   paypal.Buttons({
                     style: {
                       shape: 'pill',
@@ -669,14 +680,13 @@
                       label: 'paypal',
                     },
                     createOrder: function (data, actions) {
-                      document.getElementById("orderform").submit()
                       return actions.order.create({
                         purchase_units: [{ "amount": { "currency_code": "GBP", "value": $('.setValue').val() } }]
                       });
                     },
                     onApprove: function (data, actions) {
                       return actions.order.capture().then(function (orderData) {
-
+                        document.getElementById("orderform").submit()
                         // Full available details
                         console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
                         console.log("status", orderData.status)

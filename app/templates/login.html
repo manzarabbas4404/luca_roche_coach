@@ -8,17 +8,53 @@
         <div class="row">
             <div class="col-md-6 col-12 col-sm-12 col-lg-6"></div>
             <div class="col-md-5 col-12 col-sm-12 col-lg-5">
+
+
+                <!-- <form action="" method="post" novalidate class="shadow p-4 p-lg-5" style="border-top: 10px solid #fd8029;
+                border-radius: 7px 7px 7px 7px;">
+                    {% csrf_token %}
+                    <div>
+                        <div class="py-2 py-lg-3 py-md-3">
+                            {{form.username.label_tag}}
+                            <br>
+                            <span style="width: 100%;">{{form.username}}</span>
+                        </div>
+                        <div class="py-2 py-lg-2 py-md-2">
+                            {{form.password.label_tag}}
+                            <br>
+                            <span style="width: 100%">{{form.password}}</span>
+                        </div>
+                    </div>
+                    <div class="mt-md-4 mt-lg-4 mt-3">
+                        <button type="submit" class="btn btn-warning btn-sm btn-c  rounded-pill bg-color">Login</button>
+                    </div>
+                    <br />
+                    <div class="text-center  fw-bold">
+                        <small>SignUp to create an account.
+                            <a href="{% url 'signup' %}" class="text-danger">SignUp</a>
+                        </small>
+                    </div>
+                    <div class="text-center  fw-bold">
+                        <small>Back to Home
+                            <a href="{% url 'index' %}" class="text-danger">Home</a>
+                        </small>
+                    </div>
+                </form> -->
+
+
                 <form action="login" method="post" novalidate class="text-left form-login">
                     {% csrf_token %}
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="form2Example1">E-mail</label>
                         <input type="text" id="form2Example1" name="username" class="form-control" />
+                        
                     </div>
                     <!-- Password input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="form2Example2">Mot de passe</label>
                         <input type="password" id="form2Example2" name="password" class="form-control" />
+                       
                     </div>
                     <button type="submit" class="btn btn-dark rounded-pill">Connexion</button>
                     <!-- Register buttons -->

@@ -5,14 +5,20 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from . models import *
 from .forms import SignUpForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 # Create your views here.
 
 def index(request):
     return render(request, 'index.html')
 
+@login_required(login_url='login')
 def profile(request):
-    return render(request, 'profile.html')
+    current_user = request.user
+    user = User.objects.get(id=current_user.id)
+    data = user_table.objects.all().filter(name=user)
+    return render(request, 'profile.html',{'data':data})
 
 def myprogram(request):
     return render(request, 'myprogram.html')
@@ -20,8 +26,12 @@ def myprogram(request):
 def shoppinglist(request):
     return render(request, 'shoppinglist.html')
 
+@login_required(login_url='login')
 def recipes(request):
-    return render(request, 'recipes.html')
+    current_user = request.user
+    user = User.objects.get(id=current_user.id)
+    data = user_table.objects.all().filter(name=user)
+    return render(request, 'recipes.html',{'data':data})
 
 def sports(request):
     return render(request, 'sports.html')
@@ -32,11 +42,19 @@ def motivation(request):
 def performance(request):
     return render(request, 'performance.html')
 
+@login_required(login_url='login')
 def food(request):
-    return render(request, 'food.html')
+    current_user = request.user
+    user = User.objects.get(id=current_user.id)
+    data = user_table.objects.all().filter(name=user)
+    return render(request, 'food.html',{'data':data})
 
+@login_required(login_url='login')
 def training(request):
-    return render(request, 'training.html')
+    current_user = request.user
+    user = User.objects.get(id=current_user.id)
+    data = user_table.objects.all().filter(name=user)
+    return render(request, 'training.html',{'data':data})
 
 def cardio(request):
     return render(request, 'cardio.html')
@@ -80,13 +98,39 @@ def email_submit(request):
 
 
 
-
+# def signup_user(request):
+#     if request.method == 'POST':
+#         fm2 = User_profile(request.POST)
+#         username = request.POST['username']
+#         email = request.POST['email']
+#         phone = request.POST['phone']
+#         password1 = request.POST['password1']
+#         content = User_profile(
+#             username=username, email=email, phone=phone, password=password1)
+#         fm = SignUpForm(request.POST)
+#         if fm.is_valid():
+#             fm.save()
+#             content.save()
+#             messages.success(request, 'Account has been created successfully.')
+#             return redirect('login')
+#     else:
+#         fm = SignUpForm()
+#     return render(request, 'mobileapplication/signup.html', {'form': fm})
 def signup_user(request):
     if request.method=='POST':
         ins= user_table(request.POST)
-        name = request.POST['email']
-        print('kkkkkkkk',name)
-        password = request.POST['password']
+        name = request.POST['username']
+        password = request.POST['password1']
+        fm = SignUpForm(request.POST)
+        if fm.is_valid():
+            fm.save()
+            ins = user_table(name=name, password=password,)
+            ins.save()
+            return redirect('login')
+
+    else:
+        fm = SignUpForm()
+        return render(request, 'signup.html',{'fm':fm})
 
         # Food_Plan_Summary_week_one = request.POST['foodplansummaryweekone']
         # Food_Plan_Summary_week_one_chart = request.POST['foodplansummaryweekonechart']
@@ -143,11 +187,7 @@ def signup_user(request):
         #                 Progress_week_three_chart=Progress_week_three_chart, Progress_week_four=Progress_week_four, Progress_week_four_chart=Progress_week_four_chart, My_measurements_and_progress=My_measurements_and_progress,
         #                 The_summary_of_the_progression_curve=The_summary_of_the_progression_curve, Meal_close_to_the_training_summary=Meal_close_to_the_training_summary, Pre_post_recipe_data=Pre_post_recipe_data, In_Case_recipe_data=In_Case_recipe_data,
         #                 Meal_away_training_recipe_data=Meal_away_training_recipe_data, Dessert_recipe_data=Dessert_recipe_data)
-        ins = user_table(name=name, password=password,)
-        ins.save()
-        return redirect('/')
-    else:
-        return render(request, 'signup.html')
+
 
 
 
@@ -173,8 +213,8 @@ def signup_user(request):
     # return render(request,'signup.html',{'form':fm})
 
 
-def login_user(request):
-    return render(request, 'login.html')
+# def login_user(request):
+#     return render(request, 'login.html')
     # if not request.user.is_authenticated:
     #     if request.method=='POST':
     #         fm=AuthenticationForm(request=request,data=request.POST)
@@ -209,3 +249,24 @@ def log_out(request):
 #     else:
 #         fm=SignUpForm()
 #     return render(request,'mobileapplication/signup.html',{'form':fm})
+
+
+
+def login_user(request):
+    if not request.user.is_authenticated:
+        if request.method == 'POST':
+            fm = AuthenticationForm(request=request, data=request.POST)
+            if fm.is_valid():
+                uname = fm.cleaned_data['username']
+                upass = fm.cleaned_data['password']
+                user = authenticate(username=uname, password=upass)
+                if user is not None:
+                    login(request, user)
+                    return redirect('profile')
+
+        else:
+            fm = AuthenticationForm()
+        return render(request, 'login.html', {'form': fm})
+    else:
+        messages.success(request, 'You are already login')
+        return redirect('/')

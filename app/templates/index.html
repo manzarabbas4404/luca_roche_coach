@@ -6,14 +6,14 @@
 <div class="container-fluid body">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-12 col-sm-12 col-lg-7">
+            <div class="col-md-6 col-12 col-sm-12 col-lg-4">
             </div>
-            <div class="col-md-6 col-12 col-sm-12 col-lg-5 parttwo" id="logintext">
+            <div class="col-md-6 col-12 col-sm-12 col-lg-8 parttwo" id="logintext">
                 <div class="row text-center">
                     <!-- <div class="col-md-1"></div> -->
-                    <div class="col-md-12">
-                        <p class="paraone">REJOINS LE MOUVEMENT LEVEL-UP <br>
-                            <span style="color: white;"> Une méthode unique et personnalisé pour guider </span><br>
+                    <div class="col-md-12 pad-right">
+                        <p class="paraone">REJOINS LE MOUVEMENT LEVEL-UP <br><br class="dn">
+                            <span style="color: white;"> Une méthode unique et personnalisé pour guider </span><br><br class="dn">
                             <span>Les hommes et les femmes qui ne progresse plus en musculation</span>
                         </p>
                     </div>
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 pad-right">
                         <p class="paratwo">
                             “Vers leurs potentiels maximum  <br>
                             avec un spécialiste formé en”
@@ -30,13 +30,16 @@
                 </div>
                 <div class="row mar-b">
                     <div class="col-md-1"></div>
-                    <div class="col-md-10 text-center email-box">
-                        <p>
-                            <span class="pret" >Neuroscience, science de la nutrition et de la musculation <br>
-                            <span style="color: white;">Résultats garantis ou remboursé </span></span><br>
-                            <span class="spaisi">Saisi ton adresse email</span>
+                    <div class="col-md-10 text-center pad-right">
+                        <p class="pret-up">
+                            <span class="pret" >Neuroscience, science de la <br> nutrition  et de la musculation 
+                                <br>
+                            
+                            <!-- <span class="spaisi">Saisi ton adresse email</span> -->
+                            <span style="color: white;">Résultats garantis ou remboursé </span></span>
                         </p>
-                        <div class="col-md-12 col-lg-12 col-12">
+                        <div class="col-md-12 col-lg-12 col-12 email-box">
+
                             <form action="email_submit/" method="post" novalidate class="text-left form-email">
                                 {% csrf_token %}
                                 <!-- Email input -->
@@ -188,7 +191,7 @@
                 <p>
                     <b>+ de résultats</b> <br>
                     <b>– de prise de tête</b> <br>
-                <p>Respecte ta vie professionnelle at personnelle: Allier vie sociale,
+                <p>Respecte ta vie professionnelle personnelle: Allier vie sociale,
                     bien-être et progression c’est possible </p>
 
 

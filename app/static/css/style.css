@@ -956,6 +956,12 @@ mark {
 }
 
 @media screen and (max-width:525px) {
+    .st-it{
+        font-size: 8px !important;
+    }
+    .pad-right{
+        padding-right: 0 !important;
+    }
     /* .luca-adjusted{
         margin-left: 2% !important;
     } */
@@ -1076,14 +1082,14 @@ mark {
         padding-bottom: 0%;
     }
     .paraone {
-        font-size: 14px;
+        font-size: 10px;
         font-weight: 700;
         font-style: italic;
         padding-left: 35%;
         padding-top: 5%;
     }
     .paratwo {
-        font-size: 13px;
+        font-size: 10px;
         text-align: center;
         font-style: italic;
         color: white;
@@ -1127,8 +1133,15 @@ mark {
         box-shadow: none !important;
         padding: 0 !important;
     }
+    .dn{
+        display: block !important;
+    }
+    .pret-up{
+        line-height: 1;
+    margin-left: 30%;
+    }
     .pret {
-        font-size: 19px;
+        font-size: 10px;
     }
     .email-box{
         display: none;
@@ -1258,4 +1271,7 @@ mark {
 }
 .ronded-nav {
     padding-right: 30px;
+}
+.dn{
+    display: none;
 }

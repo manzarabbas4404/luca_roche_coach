@@ -42,10 +42,9 @@ INSTALLED_APPS = [
     'app',
 ]
 
-# CKEDITOR_UPLOAD_PREFIX = 'static/uploads/'
-# CKEDITOR_UPLOAD_PATH = "static/uploads/"
-CKEDITOR_UPLOAD_PATH = 'ck-uploads/'
-CKEDITOR_ALLOW_NONIMAGE_FILES = False
+
+CKEDITOR_UPLOAD_PATH = '/static/media/'
+CKEDITOR_ALLOW_NONIMAGE_FILES = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -132,7 +131,3 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
-CKEDITOR_UPLOAD_PATH = '/static/'
